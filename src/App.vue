@@ -108,16 +108,11 @@
 </template>
 
 <script>
-// eslint-disable-next-line no-unused-vars
-import ElRow from '@element/Row.vue';
-// eslint-disable-next-line no-unused-vars
-import ElCol from '@element/Col.vue';
+
 
 export default {
   name: 'app',
   components: {
-    ElRow,
-    ElCol,
   },
 };
 </script>

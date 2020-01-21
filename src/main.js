@@ -1,5 +1,7 @@
 import Vue from 'vue';
+// eslint-disable-next-line import/order
 import App from './App.vue';
+import './plugins/element';
 
 Vue.config.productionTip = false;
 
