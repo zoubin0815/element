@@ -1,0 +1,22 @@
+//混合 mixin .el-row BEM -> b (block)
+@mixin b($block) {
+    $B:$namespace + '-' + $block;
+    @at-root{
+      .#{$B} {
+        @content;
+      }
+    }
+  }
+  @mixin utils-clearfix {
+    $selector: &;
+    @at-root{
+      #{$selector}::after,
+      #{$selector}::before{
+          display: block;
+          content:'';
+      }
+      #{$selector}::after{
+      clear: both;
+      }
+    }
+  }

@@ -1,0 +1,23 @@
+@import "./config.scss";
+@mixin m($modifier) {
+    //&--flex
+    $selector:&;
+    $currentSelector: '';
+    @each $unit in $modifier{
+      $currentSelector: $currentSelector + $selector + $modifier--separator + $unit + ',';
+    }
+    @at-root{
+      #{$currentSelector} {
+        @content;
+      }
+    }
+  }
+  @mixin when($state) {
+    //$selector:&;
+    //$currentState:$selector + '.' + $state-prefix + $state;
+    @at-root{
+      &.#{$state-prefix + $state} {
+        @content;
+      }
+    }
+  }
