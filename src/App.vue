@@ -1,3 +1,4 @@
+
 <template>
   <div id="app">
     <h1>基础布局</h1>

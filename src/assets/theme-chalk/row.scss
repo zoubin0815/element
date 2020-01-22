@@ -2,6 +2,7 @@
 @import "./mixins/utils.scss";
 @include b(row){
   //下面的内容将会被引入到@content上
+  box-sizing: border-box;
   @include utils-clearfix;
   @include m(flex){
     display: flex;
