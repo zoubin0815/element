@@ -9,6 +9,7 @@ import Header from '@element/header';
 import Footer from '@element/footer';
 // eslint-disable-next-line import/no-unresolved
 import Aside from '@element/aside';
+import Icon from '@element/icon';
 
 const components = [
   Row,
@@ -18,6 +19,7 @@ const components = [
   Header,
   Footer,
   Aside,
+  Icon,
 ];
 const install = (Vue) => {
   components.forEach((component) => {
@@ -33,6 +35,8 @@ export default {
   Header,
   Footer,
   Aside,
+  Icon,
+
 
 };
 export {
@@ -44,5 +48,6 @@ export {
   Header,
   Footer,
   Aside,
+  Icon,
 
 };
