@@ -1,0 +1,144 @@
+@import './mixins/mixins.scss';
+@import './common/var.scss';
+@import './mixins/utils.scss';
+@import './mixins/_button';
+@include b (button){
+    cursor: pointer;
+    outline: none;
+    margin: 0;
+    transition-duration: 0.1s;
+
+    background-color: $--button-default-background-color;
+    border: $--border-base;
+    color: $--button-default-font-color;
+    padding: $--button-padding-vertical  $--button-padding-horizontal;
+    font-size: $--button-font-size;
+    font-weight: $--button-font-weight;
+    border-radius: $--button-border-radius;
+    
+    @include utils-user-select(none);
+
+    & + & {
+        margin-left: 10px;
+    }
+    &:hover {
+        background-color: $--color-primary-light-9;
+        border-color: $--color-primary-light-7;
+        color: $--color-primary;
+    }
+    &:active {
+        border-color: mix($--color-black,$--color-primary,$--button-active-shade-percent);
+        color:  mix($--color-black,$--color-primary,$--button-active-shade-percent);
+    }
+    
+    @include m(primary) {
+        @include button-variant($--button-primary-background-color, $--button-primary-border-color, $--button-primary-font-color);
+      }
+      
+      @include m(success) {
+        @include button-variant($--button-success-background-color, $--button-success-border-color, $--button-success-font-color);
+      }
+      
+      @include m(info) {
+        @include button-variant($--button-info-background-color, $--button-info-border-color, $--button-info-font-color);
+      }
+      
+      @include m(warning) {
+        @include button-variant($--button-warning-background-color, $--button-warning-border-color, $--button-warning-font-color);
+      }
+      
+      @include m(danger) {
+        @include button-variant($--button-danger-background-color, $--button-danger-border-color, $--button-danger-font-color);
+      }
+
+    // @include m(primary){
+    //     background-color: $--button-primary-background-color;
+    //     border-color: $--button-primary-border-color;
+    //     color: $--button-primary-font-color;
+      
+    //     &:hover {
+    //         background-color: mix($--color-white,$--color-primary,$--button-hover-tint-percent);
+    //         border-color: mix($--color-white,$--color-primary,$--button-hover-tint-percent);
+    //         color: $--color-white;
+    //     }
+    //     &:active {
+    //         background-color: mix($--color-black,$--color-primary,$--button-active-shade-percent);
+    //         border-color: mix($--color-black,$--color-primary,$--button-active-shade-percent);
+    //         color: $--color-white;
+    //     }
+    // }
+    // @include m(success) {
+    //     color: $--button-success-font-color;
+    //     background-color: $--button-success-background-color;
+    //     border-color: $--button-success-border-color;
+      
+    //     &:hover {
+    //       background-color: mix($--color-white, $--button-success-background-color, $--button-hover-tint-percent);
+    //       border-color: mix($--color-white, $--button-success-border-color, $--button-hover-tint-percent);
+    //       color: $--button-success-font-color;
+    //     }
+      
+    //     &:active {
+    //       background-color: mix($--color-black, $--button-success-background-color, $--button-active-shade-percent);
+    //       border-color: mix($--color-black, $--button-success-background-color, $--button-active-shade-percent);
+    //       color: $--button-success-font-color;
+    //     }
+    //   }
+      
+    //   @include m(info) {
+    //     color: $--button-info-font-color;
+    //     background-color: $--button-info-background-color;
+    //     border-color: $--button-info-border-color;
+      
+    //     &:hover {
+    //       background-color: mix($--color-white, $--button-info-background-color, $--button-hover-tint-percent);
+    //       border-color: mix($--color-white, $--button-info-border-color, $--button-hover-tint-percent);
+    //       color: $--button-info-font-color;
+    //     }
+      
+    //     &:active {
+    //       background-color: mix($--color-black, $--button-info-background-color, $--button-active-shade-percent);
+    //       border-color: mix($--color-black, $--button-info-background-color, $--button-active-shade-percent);
+    //       color: $--button-info-font-color;
+    //     }
+    //   }
+      
+    //   @include m(warning) {
+    //     color: $--button-warning-font-color;
+    //     background-color: $--button-warning-background-color;
+    //     border-color: $--button-warning-border-color;
+      
+    //     &:hover {
+    //       background-color: mix($--color-white, $--button-warning-background-color, $--button-hover-tint-percent);
+    //       border-color: mix($--color-white, $--button-warning-border-color, $--button-hover-tint-percent);
+    //       color: $--button-warning-font-color;
+    //     }
+      
+    //     &:active {
+    //       background-color: mix($--color-black, $--button-warning-background-color, $--button-active-shade-percent);
+    //       border-color: mix($--color-black, $--button-warning-background-color, $--button-active-shade-percent);
+    //       color: $--button-warning-font-color;
+    //     }
+    //   }
+      
+    //   @include m(danger) {
+    //     color: $--button-danger-font-color;
+    //     background-color: $--button-danger-background-color;
+    //     border-color: $--button-danger-border-color;
+      
+    //     &:hover {
+    //       background-color: mix($--color-white, $--button-danger-background-color, $--button-hover-tint-percent);
+    //       border-color: mix($--color-white, $--button-danger-border-color, $--button-hover-tint-percent);
+    //       color: $--button-danger-font-color;
+    //     }
+      
+    //     &:active {
+    //       background-color: mix($--color-black, $--button-danger-background-color, $--button-active-shade-percent);
+    //       border-color: mix($--color-black, $--button-danger-background-color, $--button-active-shade-percent);
+    //       color: $--button-danger-font-color;
+    //     }
+    //   }
+    
+
+
+}
