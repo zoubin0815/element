@@ -76,6 +76,20 @@ $--button-border-radius: $--border-redius-base !default; // 4px
 $--button-padding-vertical: 12px !default;
 $--button-padding-horizontal: 20px !default;
 
+$--button-medium-padding-vertical:10px;
+$--button-medium-padding-horizontal:20px;
+$--button-medium-font-size:$--font-size-base;
+$--button-medium-border-radius: $--border-redius-base;
+
+$--button-small-padding-vertical:9px;
+$--button-small-padding-horizontal:15px;
+$--button-small-font-size:$--font-size-extra-small;
+$--button-small-border-radius: #{$--border-redius-base - 1};
+
+$--button-mini-padding-vertical:7px;
+$--button-mini-padding-horizontal:15px;
+$--button-mini-font-size:$--font-size-base;
+$--button-mini-border-radius: $--border-redius-base;
 
 $--button-default-background-color: $--color-white !default; // #fff
 $--button-default-border-color: $--border-color-base !default; // #dcdfe6

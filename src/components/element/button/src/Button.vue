@@ -8,10 +8,14 @@
         circle ? 'is-circle' : '',
         icon ? 'is-icon' : '',
         disabled ? 'is-disabled' : '',
+        size ? `el-button--${size}` : '',
 
       ]">
-      <i :class="icon" v-if="icon"></i>
-      <slot></slot></button>
+      <i :class="icon" v-if="icon && !loading"></i>
+      <i class="el-icon-loading" v-if="loading"></i>
+
+      <span v-if="$slots.default"><slot></slot></span>
+      </button>
 </template>
 <script>
 export default {
@@ -23,6 +27,8 @@ export default {
     circle: Boolean,
     icon: String,
     disabled: Boolean,
+    loading: Boolean,
+    size: String,
   },
 };
 </script>

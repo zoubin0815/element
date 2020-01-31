@@ -12,7 +12,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.el-icon--right{
+  margin-left: 5px;
+}
+.el-icon--right{
+  margin-right: 5px;
+}
 .el-icon-ice-cream-round:before {
   content: "\e6a0";
 }

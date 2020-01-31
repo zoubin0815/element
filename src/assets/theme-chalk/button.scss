@@ -31,6 +31,11 @@
         border-color: mix($--color-black,$--color-primary,$--button-active-shade-percent);
         color:  mix($--color-black,$--color-primary,$--button-active-shade-percent);
     }
+    [class *= "el-icon-"]{
+      & + span {
+        margin-left: 5px;
+      }
+    }
 
     @include when(plain){
         &:hover{
@@ -56,6 +61,7 @@
 
     @include when(disabled) {
       &,
+      &:hover,
       &.is-plain{
       cursor: not-allowed;
       background-color: $--button-disabled-background-color;
@@ -90,6 +96,52 @@
         @include button-variant($--button-danger-background-color, $--button-danger-border-color, $--button-danger-font-color);
      
       }
+      @include m(text){
+        padding-left: 0;
+        padding-right: 0 ;
+        border-color: transparent;
+        background-color: transparent;
+        color: $--color-primary;
+        &:hover{
+          border-color: transparent;
+          background-color: transparent;
+          color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+        }
+        &:active{
+          background-color: transparent;
+          border-color: transparent;
+          color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+        }
+        &.is-disabled{
+          border-color: transparent;
+        }
+      }
+      $--button-medium-padding-vertical:10px;
+      $--button-medium-padding-horizontal:20px;
+      $--button-medium-font-size:$--font-size-base;
+      $--button-medium-border-radius: $--border-redius-base;
+      
+      $--button-small-padding-vertical:9px;
+      $--button-small-padding-horizontal:15px;
+      $--button-small-font-size:$--font-size-extra-small;
+      $--button-small-border-radius: #{$--border-redius-base - 1};
+      
+      $--button-mini-padding-vertical:7px;
+      $--button-mini-padding-horizontal:15px;
+      $--button-mini-font-size:$--font-size-base;
+      $--button-mini-border-radius: $--border-redius-base;
+      @include m(medium) {
+        @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-medium-border-radius);
+      }
+      
+      @include m(small) {
+        @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-medium-font-size, $--button-small-border-radius);
+      }
+      
+      @include m(mini) {
+        @include button-size($--button-mini-padding-vertical, $--button-mini-padding-horizontal, $--button-medium-font-size, $--button-mini-border-radius);
+      }
+      
     // @include m(primary){
     //     background-color: $--button-primary-background-color;
     //     border-color: $--button-primary-border-color;
