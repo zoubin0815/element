@@ -11,6 +11,7 @@ import Footer from '@element/footer';
 import Aside from '@element/aside';
 import Icon from '@element/icon';
 import Button from '@element/button';
+import ButtonGroup from '@element/button-group';
 
 const components = [
   Row,
@@ -22,6 +23,7 @@ const components = [
   Aside,
   Icon,
   Button,
+  ButtonGroup,
 ];
 const install = (Vue) => {
   components.forEach((component) => {
@@ -39,6 +41,7 @@ export default {
   Aside,
   Icon,
   Button,
+  ButtonGroup,
 
 
 };
@@ -53,5 +56,6 @@ export {
   Aside,
   Icon,
   Button,
+  ButtonGroup,
 
 };
