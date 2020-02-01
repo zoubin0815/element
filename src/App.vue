@@ -1,15 +1,9 @@
 
 <template>
   <div id="app">
-    <el-button-group>
-      <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
-      <el-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></el-button>
-    </el-button-group>
-    <el-button-group>
-      <el-button type="primary" icon="el-icon-edit"></el-button>
-      <el-button type="primary" icon="el-icon-share"></el-button>
-      <el-button type="primary" icon="el-icon-delete"></el-button>
-    </el-button-group>
+   <el-button autofocus type="primary">按钮</el-button>
+   <el-button @click="handleClick" native-type="submit" type="primary">按钮</el-button>
+
     </div>
 </template>
 
@@ -18,7 +12,10 @@
 
 export default {
   name: 'app',
-  components: {
+  methods: {
+    handleClick() {
+      console.log('xx');
+    },
   },
 };
 </script>
