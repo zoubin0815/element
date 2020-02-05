@@ -9,6 +9,7 @@
       }
     ]"
     :href="href"
+    @click="handleClick"
   >
     <i v-if="icon" :class="icon"></i>
     <span v-if="$slots.default">
@@ -29,6 +30,12 @@ export default {
     type: String,
     disabled: Boolean,
     icon: String,
+  },
+  methods: {
+    handleClick() {
+      // eslint-disable-next-line no-undef
+      this.$emit('click', e);
+    },
   },
 };
 </script>
